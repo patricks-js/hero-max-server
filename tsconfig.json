@@ -4,7 +4,7 @@
     "module": "CommonJS",
     "lib": ["ESNext", "DOM"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "removeComments": true,
     "allowJs": true,
     "checkJs": true,
@@ -29,5 +29,5 @@
       "@utils/*": ["/utils/*"]
     }
   },
-  "include": ["./src/**/*"]
+  "include": ["src", "jest.config.ts"]
 }

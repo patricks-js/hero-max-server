@@ -8,7 +8,7 @@
     "start": "node dist/{file_name}.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules ./src/{file_name}.ts",
     "husky:prepare": "husky install",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
     "test:push": "yarn test --coverage"
@@ -50,3 +50,4 @@
     "typescript": "^4.8.3"
   }
 }
+
