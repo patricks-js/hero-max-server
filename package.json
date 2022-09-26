@@ -4,7 +4,14 @@
   "description": "Back-end for my  HeroMax application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && tsc-alias",
+    "start": "node dist/{file_name}.js",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules ./src/{file_name}.ts",
+    "husky:prepare": "husky install",
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:push": "yarn test --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,6 +30,14 @@
   "homepage": "https://github.com/patricks-js/hero-max-server#readme",
   "devDependencies": {
     "@types/node": "^18.7.21",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "ts-alias": "^0.0.3-1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.1.0",
