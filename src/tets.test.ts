@@ -1,5 +1,5 @@
 it("should be able to create", () => {
-  const name = "Patrick"
+    const name = "Patrick"
 
-  expect(name).toBe("Patrick")
+    expect(name).toBe("Patrick")
 })
